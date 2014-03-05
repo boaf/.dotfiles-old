@@ -1,10 +1,6 @@
 export ZSH=$HOME/.dotfiles
 
-source $ZSH/path.zsh
-
-source $ZSH/aliases.zsh
-source $ZSH/config.zsh
-source $ZSH/prompt.zsh
+source $ZSH/zsh/{path,aliases,config,prompt}.zsh
 
 autoload -U compinit
 compinit
