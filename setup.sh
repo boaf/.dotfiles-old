@@ -11,3 +11,4 @@ ln -s $HOME/.dotfiles/zsh/zshrc.zsh $HOME/.zshrc
 ln -s $HOME/.dotfiles/vim/.vim $HOME/.vim
 ln -s $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/.dotfiles/git/git.conf $HOME/.gitconfig
