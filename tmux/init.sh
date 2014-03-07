@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # auto-start tmux control mode if we're SSH'd
 
