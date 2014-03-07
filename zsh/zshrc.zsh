@@ -1,9 +1,9 @@
 export ZSH=$HOME/.dotfiles
 
-source $ZSH/zsh/path.zsh
-source $ZSH/zsh/aliases.zsh
-source $ZSH/zsh/config.zsh
-source $ZSH/zsh/prompt.zsh
+. $ZSH/zsh/path.zsh
+. $ZSH/zsh/aliases.zsh
+. $ZSH/zsh/config.zsh
+. $ZSH/zsh/prompt.zsh
 
 autoload -U compinit
 compinit
