@@ -3,3 +3,7 @@
 
 # mac
 .DS_Store
+
+# tmux
+tmux-client*.log
+tmux-server*.log
