@@ -9,4 +9,4 @@ if [ $SSH_CONNECTION ]; then
     else
         tmux -CC -2 new-session -s $WHOAMI
     fi
-else
+fi
