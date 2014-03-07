@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
 ZSHRC=$HOME/.zshrc
 
