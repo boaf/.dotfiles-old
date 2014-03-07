@@ -1,4 +1,2 @@
 syntax enable
-set background=dark
-colorscheme molokai
-let g:molokai_original = 1
+set tabstop=4 shiftwidth=4 expandtab
