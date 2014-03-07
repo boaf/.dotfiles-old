@@ -2,13 +2,12 @@
 
 # auto-start tmux control mode if we're SSH'd
 
-if [ $SSH_CONNECTION ]; then
+if [ $SSH_CONNECTION ] && [ ! $TMUX ]; then
     echo -n "Login w/ tmux in Control Mode? [Y/n]"
     read choice
-    case $choice in
-        [Nn]* ) return;;
-        * ) break;;
-    esac
+    if [[ $choice =~ [Nn] ]]; then
+        return
+    fi
 
     WHOAMI=$(whoami)
     if tmux has-session -t $WHOAMI 2>/dev/null; then
