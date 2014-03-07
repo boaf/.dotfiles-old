@@ -13,3 +13,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case insensitive
 zstyle ':completion:*' insert-tab pending # pasted tabs don't complete
 
 unsetopt correct
+
+. $ZSH/tmux/init.sh
