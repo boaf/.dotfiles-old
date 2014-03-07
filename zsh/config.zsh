@@ -2,7 +2,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export CLICOLOR=true
 
 if [[ $OSTYPE =~ darwin ]]; then
-    export EDITOR='subl'
+    export EDITOR='subl -w'
 else
     export EDITOR='vi'
 
