@@ -3,9 +3,10 @@
 # auto-start tmux control mode if we're SSH'd
 
 if [ $SSH_CONNECTION ]; then
-    read -p "Login w/ tmux in Control Mode? [Y/n]" choice
+    echo -n "Login w/ tmux in Control Mode? [Y/n]"
+    read choice
     case $choice in
-        [Nn]* ) exit;;
+        [Nn]* ) return;;
         * ) break;;
     esac
 
