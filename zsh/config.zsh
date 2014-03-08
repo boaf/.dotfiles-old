@@ -2,9 +2,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export CLICOLOR=true
 
 if [[ $OSTYPE =~ darwin ]]; then
-    export EDITOR='subl -w'
+    export EDITOR=subl
 else
-    export EDITOR='vi'
+    export EDITOR=vi
 
     SSHPID=`ps ax|grep -c "[s]sh-agent"`
     if (( $SSHPID == 0 ))
