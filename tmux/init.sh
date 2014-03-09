@@ -3,7 +3,7 @@
 # auto-start tmux control mode if we're SSH'd
 
 if [ $SSH_CONNECTION ] && [ ! $TMUX ]; then
-    echo -n "Login w/ tmux in Control Mode? [Y/n]"
+    echo -n "tmux? [Y/n] "
     read choice
     if [[ $choice =~ [Nn] ]]; then
         return
