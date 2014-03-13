@@ -4,7 +4,12 @@ alias ll="l -lah"
 
 alias c="cd .."
 
-alias e=$EDITOR
+alias e='$EDITOR'
 
-reload!() { source $HOME/.zshrc; }
+reload! () { source $HOME/.zshrc; }
 
+server () {
+    port=${1-8080}
+    open http://localhost:$port
+    python -m SimpleHTTPServer $port
+}
