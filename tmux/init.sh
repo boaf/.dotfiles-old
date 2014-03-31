@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# auto-start tmux control mode if we're SSH'd
+# auto-start tmux if we're SSH'd
 
 if [ $SSH_CONNECTION ] && [ ! $TMUX ]; then
     echo -n "tmux? [Y/n] "
@@ -11,8 +11,8 @@ if [ $SSH_CONNECTION ] && [ ! $TMUX ]; then
 
     WHOAMI=$(whoami)
     if tmux has-session -t $WHOAMI 2>/dev/null; then
-        tmux -CC -2 attach-session -t $WHOAMI
+        tmux -2 attach-session -t $WHOAMI
     else
-        tmux -CC -2 new-session -s $WHOAMI
+        tmux -2 new-session -s $WHOAMI
     fi
 fi
