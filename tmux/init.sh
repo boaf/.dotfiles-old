@@ -15,5 +15,5 @@ if [ $SSH_CONNECTION ] && [ ! $TMUX ]; then
     # else
         # tmux -2 new-session -s $WHOAMI
     # fi
-    tmux -CC -2 new -A -s $WHOAMI
+    tmux -2 new -A -s $WHOAMI
 fi
