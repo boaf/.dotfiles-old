@@ -16,3 +16,9 @@ ln -s $D/git/git.conf $HOME/.gitconfig
 
 $D/homebrew/install.sh
 $D/karabiner/install.sh
+
+if [[ $SHELL =~ zsh ]]; then
+	echo "zsh already set as default shell"
+else
+	chsh -s /usr/local/bin/zsh # using git zsh instead of mac's older default
+fi
