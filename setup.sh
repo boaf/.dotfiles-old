@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 ZSHRC=$HOME/.zshrc
 
@@ -7,7 +7,12 @@ if [ -f $ZSHRC ]; then
     exit
 fi
 
-ln -s $HOME/.dotfiles/zsh/zshrc.zsh $HOME/.zshrc
-ln -s $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
-ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/.dotfiles/git/git.conf $HOME/.gitconfig
+$D=$HOME/.dotfiles
+
+ln -s $D/zsh/zshrc.zsh $HOME/.zshrc
+ln -s $D/vim/.vimrc $HOME/.vimrc
+ln -s $D/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $D/git/git.conf $HOME/.gitconfig
+
+$D/homebrew/install.sh
+$D/karabiner/install.sh

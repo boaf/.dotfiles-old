@@ -7,3 +7,6 @@
 # tmux
 tmux-client*.log
 tmux-server*.log
+
+# sublime
+*.sublime-*
