@@ -7,7 +7,7 @@ if [ -f $ZSHRC ]; then
     exit
 fi
 
-$D=$HOME/.dotfiles
+D=$HOME/.dotfiles
 
 ln -s $D/zsh/zshrc.zsh $HOME/.zshrc
 ln -s $D/vim/.vimrc $HOME/.vimrc
