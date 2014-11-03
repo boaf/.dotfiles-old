@@ -35,7 +35,7 @@ cask_packages=(
     sequel-pro
     sourcetree
     spectacle
-    sublime-text
+    sublime-text3
     the-unarchiver
     virtualbox
     vlc
@@ -52,4 +52,6 @@ then
 fi
 
 brew install ${brew_packages[@]}
+
+brew tap caskroom/versions
 brew cask install ${cask_packages[@]}
