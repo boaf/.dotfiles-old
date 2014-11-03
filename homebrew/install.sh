@@ -21,18 +21,21 @@ brew_packages=(
 )
 
 cask_packages=(
+    appcleaner
     boot2docker
     chicken
     cyberduck
     dropbox
     firefox
     google-chrome
+    google-chrome-canary
     iterm2
     karabiner
     keepassx
     rdio
     robomongo
     sequel-pro
+    skype
     sourcetree
     spectacle
     sublime-text3
