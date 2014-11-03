@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ "$(whoami)" != "root"]: then
+	echo "Setup must be run as root. Try sudo"
+	exit
+fi
+
 ZSHRC=$HOME/.zshrc
 
 if [ -f $ZSHRC ]; then
@@ -20,7 +25,6 @@ $D/karabiner/install.sh
 if [[ $SHELL =~ zsh ]]; then
 	echo "zsh already set as default shell"
 else
-	echo "You may be prompted to enter your password to set zsh as shell"
-	sudo echo /usr/local/bin/zsh >> /etc/shells
+	echo /usr/local/bin/zsh >> /etc/shells
 	chsh -s /usr/local/bin/zsh # using git zsh instead of mac's older default
 fi
