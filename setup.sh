@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$(whoami)" != "root"]: then
+if [ "$(whoami)" != "root"]; then
 	echo "Setup must be run as root. Try sudo"
 	exit
 fi
