@@ -2,9 +2,6 @@
 
 ZSHRC=$HOME/.zshrc
 
-echo "Enter password for future commands"
-sudo -s
-
 if [ -f $ZSHRC ]; then
     echo "\033[0;30;41m .dotfiles already installed! \033[0m"
     exit
@@ -23,6 +20,7 @@ $D/karabiner/install.sh
 if [[ $SHELL =~ zsh ]]; then
 	echo "zsh already set as default shell"
 else
+	echo "You may be prompted to enter your password to set zsh as shell"
 	sudo echo /usr/local/bin/zsh >> /etc/shells
 	chsh -s /usr/local/bin/zsh # using git zsh instead of mac's older default
 fi
