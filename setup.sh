@@ -1,5 +1,12 @@
 #!/bin/sh
 
+link () {
+    from="$1"
+    to="$2"
+    rm -f "$to"
+    ln -s "$from" "$to"
+}
+
 ZSHRC=$HOME/.zshrc
 
 if [ -f $ZSHRC ]; then
@@ -14,14 +21,19 @@ ln -s $D/vim/.vimrc $HOME/.vimrc
 ln -s $D/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $D/git/git.conf $HOME/.gitconfig
 
-$D/homebrew/install.sh
-$D/karabiner/install.sh
+if [ "$(uname -s)" == "Darwin" ]; then
+    $D/homebrew/install.sh
+    $D/karabiner/install.sh
+
+    link "$D/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+    link "$D/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+fi
 
 if [[ $SHELL =~ zsh ]]; then
-	echo "zsh already set as default shell"
+    echo "zsh already set as default shell"
 else
-	echo "zsh must now be set as default shell"
-	echo "run this after this script exits"
-	echo "    sudo /usr/local/bin/zsh >> /etc/shells"
-	echo "    chsh -s /usr/local/bin/zsh"
+    echo "zsh must now be set as default shell"
+    echo "run this after this script exits"
+    echo "    sudo /usr/local/bin/zsh >> /etc/shells"
+    echo "    chsh -s /usr/local/bin/zsh"
 fi

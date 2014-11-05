@@ -44,10 +44,6 @@ cask_packages=(
     vlc
 )
 
-if [ "$(uname -s)" != "Darwin" ]; then
-    exit
-fi
-
 if test ! $(which brew)
 then
     echo "Installing Homebrew..."
