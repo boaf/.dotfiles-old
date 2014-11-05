@@ -27,6 +27,10 @@ if [ "$(uname -s)" == "Darwin" ]; then
 
     link "$D/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
     link "$D/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+
+    defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -boolean true
+    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iterm2"
+    defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesCopy -boolean true
 fi
 
 if [[ $SHELL =~ zsh ]]; then
